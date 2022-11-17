@@ -15,6 +15,6 @@ metadata:
             pathType: Prefix
             backend:
               service:
-                name: dev-kustomization-microservices-ui
+                name: dev-kustomization-inventoryreader-backend
                 port:
                   number: 80

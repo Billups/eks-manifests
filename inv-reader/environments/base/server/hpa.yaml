@@ -7,7 +7,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: dev-kustomization-microservices-ui
+    name: dev-kustomization-inventoryreader-backend
   minReplicas: 1
   maxReplicas: 3
   metrics:

@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kustomization-microservices-ui
+  name: kustomization-inventoryreader-backend
   labels:
     app.kubernetes.io/part-of: kustomize-microservices
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: kustomization-microservices-ui
+      app: kustomization-inventoryreader-backend
   template:
     metadata:
       labels:
-        app: kustomization-microservices-ui
+        app: kustomization-inventoryreader-backend
     spec:
       containers:
-        - name: kustomization-microservices-ui
-          image: 292526779943.dkr.ecr.eu-central-1.amazonaws.com/app/maverick-ui/dev:dev
+        - name: kustomization-inventoryreader-backend
+          image: 292526779943.dkr.ecr.eu-central-1.amazonaws.com/app/billups-inventoryreader/dev:f21cb0df
           resources:
             limits:
               cpu: 500m
