@@ -35,16 +35,16 @@ spec:
           #       name: mu-dev
           ports:
             - containerPort: 3000
-          readinessProbe: # use Readiness Probes for your web app to decide when the Pod should receive traffic
-            httpGet:
-              path: /api/readiness #our default BaseRouter responds to /api requests
-              port: 3000
-            initialDelaySeconds: 60
-            timeoutSeconds: 5
-          livenessProbe: # use Liveness Probes to tell the platform when to kill containers it thinks are dead or deadlocked; this should be almost never, so we choose very conservatively high values. Otherwise we get containers being killed under load, which can lead to cascading failures,
-            httpGet:
-              path: /api/liveness #our default BaseRouter responds to /api requests
-              port: 3000
-            initialDelaySeconds: 130
-            timeoutSeconds: 10
-            failureThreshold: 10
+          # readinessProbe: # use Readiness Probes for your web app to decide when the Pod should receive traffic
+          #   httpGet:
+          #     path: /api/readiness #our default BaseRouter responds to /api requests
+          #     port: 3000
+          #   initialDelaySeconds: 60
+          #   timeoutSeconds: 5
+          # livenessProbe: # use Liveness Probes to tell the platform when to kill containers it thinks are dead or deadlocked; this should be almost never, so we choose very conservatively high values. Otherwise we get containers being killed under load, which can lead to cascading failures,
+          #   httpGet:
+          #     path: /api/liveness #our default BaseRouter responds to /api requests
+          #     port: 3000
+          #   initialDelaySeconds: 130
+          #   timeoutSeconds: 10
+          #   failureThreshold: 10
