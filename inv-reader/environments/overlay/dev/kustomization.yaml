@@ -4,6 +4,6 @@ namePrefix: dev-
 images:
 - name: 292526779943.dkr.ecr.eu-central-1.amazonaws.com/app/billups-inventoryreader/dev
   newName: 292526779943.dkr.ecr.eu-central-1.amazonaws.com/app/billups-inventoryreader/dev
-  newTag: 0fef5363
+  newTag: dbee4d3d
 resources:
 - ../../base/server
