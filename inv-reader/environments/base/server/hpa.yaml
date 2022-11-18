@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: maverick-ui-hpa
+  name: inventoryreader-backend-hpa
   namespace: dev
 spec:
   scaleTargetRef:
